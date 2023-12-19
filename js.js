@@ -1,20 +1,30 @@
-function openPage(pageName,elmnt) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    document.getElementById(pageName).style.display = "block";
-  
-  
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
+const buttons = document.querySelectorAll('.tablink');
+const tabs = document.querySelectorAll('.tabcontent');
+const nav_buttons = document.querySelectorAll('.tablink');
+
+const hide_tabs = () => {
+  tabs.forEach(tab => {
+    tab.style.display = "none";
+  });
+}
+
+hide_tabs()
+
+const openPage = (pageName,elmnt) => {
+  //console.log(pageName);
+  hide_tabs();
+  document.getElementById(pageName).style.display = "block";
+
+  for (let i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
   }
-  
-  document.getElementById(pageName).style.display = "block";
-  
-  }
-  // Get the element with id="defaultOpen" and click on it
-  document.getElementById("defaultOpen").click();
-  
+}
+
+buttons.forEach(element => {
+  element.addEventListener('click', (e) => {
+    openPage(e.target.value);
+  });
+});
+
+// Get the element with id="defaultOpen" and click on it
+document.querySelector('#defaultOpen').click();

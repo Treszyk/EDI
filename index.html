@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDI</title>
+</head>
 <body>
-<button class="tablink" onclick="openPage('Data', this, '#9933ff')"id="defaultOpen">Data</button>
-<button class="tablink" onclick="openPage('Graphs', this, '#9933ff')">Graphs</button>
-<button class="tablink" onclick="openPage('Authors', this, '#9933ff')">Authors</button>
+  <button class="tablink" id="defaultOpen" value="Data">Data</button>
+  <button class="tablink" value="Graphs">Graphs</button>
+  <button class="tablink" value="Authors">Authors</button>
 
-<div id="TAB_Data" class="tabcontent">
-  div id="Data">
-
+  <div id="Data" class="tabcontent">
+    <div id="container">
+      <h1>Data</h1>
+    </div>
   </div>
-</div>
 
-<div id="TAB_Graphs" class="tabcontent">
-  <div id="Graphs">
-
+  <div id="Graphs" class="tabcontent">
+    <div id="container">
+      <h1>Graphs</h1>
+    </div>
   </div>
-</div>
 
-<div id="TAB_Authors" class="tabcontent">
-  <dev id="Authors">
+  <div id="Authors" class="tabcontent">
+    <dev id="container">
+      <h1>Authors</h1>
+    </dev>
+  </div>
 
-  </dev>
-</div>
-
-<script src="js.js"></script> 
-
+  <script src="js.js"></script> 
 </body>
 </html> 
