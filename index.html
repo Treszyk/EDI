@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EDI</title>
+  <link rel="stylesheet" href="css_loader_anim.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <button class="tablink" id="defaultOpen" value="Data">Data</button>
@@ -11,23 +13,37 @@
   <button class="tablink" value="Authors">Authors</button>
 
   <div id="Data" class="tabcontent">
-    <div id="container">
+    <div class="container">
       <h1>Data</h1>
+      <div id="loader" class="center">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+      <table id="data_table"></table>
     </div>
   </div>
 
   <div id="Graphs" class="tabcontent">
-    <div id="container">
+    <div class="container">
       <h1>Graphs</h1>
     </div>
   </div>
 
   <div id="Authors" class="tabcontent">
-    <dev id="container">
+    <dev class="container">
       <h1>Authors</h1>
     </dev>
   </div>
 
   <script src="js.js"></script> 
+  <script src="data.js"></script>
 </body>
 </html> 

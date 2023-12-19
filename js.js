@@ -15,8 +15,8 @@ const openPage = (pageName,elmnt) => {
   hide_tabs();
   document.getElementById(pageName).style.display = "block";
 
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
+  for (let i = 0; i < nav_buttons.length; i++) {
+    nav_buttons[i].style.backgroundColor = "";
   }
 }
 
