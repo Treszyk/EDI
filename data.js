@@ -21,5 +21,5 @@ const load_into_html = (data) => {
 
 //fetching the data from mockaroo api
 //const rows = fetch('https://my.api.mockaroo.com/pogoda.json?key=b3f3e0f0').then(res => res.json()).then(res => {
-//    load_into_html(res);
+ //   load_into_html(res);
 //})
