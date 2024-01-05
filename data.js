@@ -1,18 +1,33 @@
 const data_tab = document.querySelector('#Data');
 const data_table = document.querySelector('#Data table');
 const loader_anim = document.querySelector('#Data #loader');
+
 const load_into_html = (data) => {
     //gettings the keys of the api data
     keys = Object.keys(data[0]);
-
     //creating the header row
-    data_table.innerHTML = `<tr><th>${keys[0]}</th><th>${keys[1]}</th><th>${keys[2]}</th><th>${keys[3]}</th><th>${keys[4]}</th><th>${keys[5]}</th><th>${keys[6]}</th><th>${keys[7]}</th></tr>`
-    
+    const header_row = document.createElement('tr');
+    header_row.innerHTML = '<th>ID</th>';
+
+    keys.forEach(key => {
+        let cell = document.createElement('th');
+        cell.innerHTML = key;
+        header_row.appendChild(cell);
+    });
+
+    data_table.appendChild(header_row);
     //displaying data on the wesbite
-    data.forEach(row => {
+
+    data.forEach((row, i) => {
         //creating table rows
         let table_row = document.createElement('tr');
-        table_row.innerHTML += `<td>${row['city']}</td><td>${row['date']}</td><td>${row['temperature']}</td><td>${row['humidity']}</td><td>${row['wind_speed']}</td><td>${row['weather_condition']}</td><td>${row['sunrise_time']}</td><td>${row['sunset_time']}</td>`;
+        table_row.innerHTML = `<td>${i+1}</td>`;
+        //creating rows based on keys of the json
+        keys.forEach(key => {
+            let row_cell = document.createElement('td');
+            row_cell.innerHTML = row[key];
+            table_row.appendChild(row_cell);
+        })
         data_table.appendChild(table_row);
     });
 
@@ -20,6 +35,6 @@ const load_into_html = (data) => {
 }
 
 //fetching the data from mockaroo api only 200 requests a day
-const rows = fetch('https://my.api.mockaroo.com/pogoda.json?key=b3f3e0f0').then(res => res.json()).then(res => {
-    load_into_html(res);
-})
+//const rows = fetch('https://my.api.mockaroo.com/pogoda.json?key=b3f3e0f0').then(res => res.json()).then(res => {
+//    load_into_html(res);
+//})
