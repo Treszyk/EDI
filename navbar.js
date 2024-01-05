@@ -1,6 +1,7 @@
 const buttons = document.querySelectorAll('.tablink');
 const tabs = document.querySelectorAll('.tabcontent');
 const nav_buttons = document.querySelectorAll('.tablink');
+let curr_active = null;
 
 const hide_tabs = () => {
   tabs.forEach(tab => {
@@ -10,7 +11,12 @@ const hide_tabs = () => {
 
 hide_tabs()
 
-const openPage = (pageName,elmnt) => {
+const openPage = (pageName, clicked) => {
+  if(curr_active) {
+    curr_active.classList.remove('active');
+    clicked.classList.add('active');
+  }
+  curr_active = clicked;
   //console.log(pageName);
   hide_tabs();
   document.getElementById(pageName).style.display = "block";
@@ -22,7 +28,7 @@ const openPage = (pageName,elmnt) => {
 
 buttons.forEach(element => {
   element.addEventListener('click', (e) => {
-    openPage(e.target.value);
+    openPage(e.target.value, e.target);
   });
 });
 
