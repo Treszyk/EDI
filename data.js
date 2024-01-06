@@ -34,6 +34,15 @@ const load_into_html = (data) => {
     loader_anim.style.display = 'none';
 }
 
+const myChart_1 = new Chart("myChart_1", {
+
+});
+
+
+const myChart_2 = new Chart("myChart_2", {
+
+});
+
 //fetching the data from mockaroo api only 200 requests a day
 //const rows = fetch('https://my.api.mockaroo.com/pogoda.json?key=b3f3e0f0').then(res => res.json()).then(res => {
 //    load_into_html(res);

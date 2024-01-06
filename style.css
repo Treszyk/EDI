@@ -79,20 +79,20 @@ button.active {
     color: #ececec;
 }
 
-table{
+#Data{
     border-spacing: 8px;
     margin: 0 auto;
     width: 80%;
 }
 
-td, th{
+#Data td, #Data th{
     border: 1px solid #ececec; 
     padding: 10px;
     text-align: center;
     font-size: 120%;
 }
 
-th{
+#Data th{
     border: 1px solid #ececec;
     color: #9fd3c7;
     text-shadow: 0 0 10px #142d4c;
@@ -100,7 +100,7 @@ th{
     font-size: 140%;
 }
 
-th:hover{
+#Data th:hover{
     color: #142d4c;
     text-shadow: 0 0 10px #ececec;
     cursor: pointer;
@@ -121,4 +121,28 @@ footer{
 .tabcontent {
     min-height: 100%;
     padding: 40px;
+}
+
+#first_table {
+    border-spacing: 8px;
+    margin: 0 auto;
+    width: 80%;
+    position: absolute;
+    top: 25%;
+}
+
+canvas {
+    width: 10%;
+}
+
+.open_github {
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  background-color: #3226d4;
+  margin-right: auto;
+  border-radius:15px;
+  padding: 15px 32px;
+  border: none;
 }
