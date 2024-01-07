@@ -116,6 +116,8 @@ button.active {
     background-color: white;
     padding: 25px;
     margin: 10px;
+    max-width: 1050px;
+    max-height: 550px;
 }
 
 footer{
@@ -137,7 +139,12 @@ footer{
     justify-content: center;
     align-items: center;
 }
-
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .author {
     display: flex;
     flex-direction: column;

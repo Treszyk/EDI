@@ -1,7 +1,7 @@
 const data_tab = document.querySelector('#Data');
 const data_table = document.querySelector('#Data table');
 const loader_anim = document.querySelector('#Data #loader');
-const graph_loader_anim = document.querySelector('#Graphs #loader');
+const graph_loader_anim = document.querySelector('#Graphs #loader2');
 const graph_1 = document.querySelector('canvas#myChart_1');
 const graph_2 = document.querySelector('canvas#myChart_2');
 
@@ -45,6 +45,7 @@ const create_charts = (data) => {
   // Creating the temperature chart
   const temperatureChart = new Chart(document.getElementById('myChart_1'), {
     type: 'bar',
+    responsive: true,
     data: {
       labels: cities,
       datasets: [{
@@ -65,6 +66,7 @@ const create_charts = (data) => {
   // Creating the humidity chart
   const humidityChart = new Chart(document.getElementById('myChart_2'), {
     type: "line",
+    responsive: true,
     data: {
       labels: cities,
       datasets: [{
