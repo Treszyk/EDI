@@ -19,7 +19,7 @@ const openPage = (pageName, clicked) => {
   curr_active = clicked;
   //console.log(pageName);
   hide_tabs();
-  document.getElementById(pageName).style.display = "block";
+  document.getElementById(pageName).style.display = "flex";
 
   for (let i = 0; i < nav_buttons.length; i++) {
     nav_buttons[i].style.backgroundColor = "";

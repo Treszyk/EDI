@@ -12,9 +12,9 @@
   <header>
     <span>POGODA</span>
     <div id="nav">
-      <button class="tablink active" id="defaultOpen" value="Data">DATA</button>
-      <button class="tablink" value="Graphs">GRAPHS</button>
-      <button class="tablink" value="Authors">AUTHORS</button>
+      <button class="tablink active" id="defaultOpen" value="Data">DANE</button>
+      <button class="tablink" value="Graphs">WYKRESY</button>
+      <button class="tablink" value="Authors">AUTORZY</button>
     </div>
   </header>
 
@@ -38,29 +38,38 @@
     </div>
 
     <div id="Graphs" class="tabcontent">
-      <canvas id="myChart_1"></canvas>
-      <canvas id="myChart_2"></canvas>
+      <div class="container">
+        <div id="loader" class="center">
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+        </div>
+        <table id="data_table"></table>
+      </div>
+      <canvas class="chart" id="myChart_1"></canvas>
+      <canvas class="chart" id="myChart_2"></canvas>
     </div>
 
     <div id="Authors" class="tabcontent">
-      <h1>
-      <table id="first_table">
-        <tr>
-          <td>
-            Patryk Sowiński<br>
-            <a href="https://github.com/Treszyk"><button class="open_github">Github</button></a>
-          </td>
-          <td>
-            Karol Żabicki<br>
-            <a href="https://github.com/KarolZabicki"><button class="open_github">Github</button></a>
-          </td>
-          <td>
-            Michał Rybak<br>
-            <a href="https://github.com/Veeten"><button class="open_github">Github</button></a>
-          </td>
-        </tr>
-      </table>
-      </h1>
+        <div class="author">
+          <h1>Patryk Sowiński</h1>
+          <a class="btn btn-primary" href="https://github.com/Treszyk">GITHUB</a>
+        </div>
+        <div class="author">
+          <h1>Karol Żabicki</h1>
+          <a class="btn btn-primary" href="https://github.com/KarolZabicki">GITHUB</a>
+        </div>
+        <div class="author">
+          <h1>Michał Rybak</h1>
+          <a class="btn btn-primary" href="https://github.com/Veeten">GITHUB</a>
+        </div>
     </div>
   </main>
 

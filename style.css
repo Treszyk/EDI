@@ -7,13 +7,17 @@ body{
     text-align: center;
     background-color: #385170;
     color: #ececec;
-    padding-top: 150px;
+    padding-top: 175px;
     min-height: 100vh;
 }
 
 main{
     width: 90%;
+    flex: 1;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header span {
@@ -39,7 +43,9 @@ header {
     top: 0;
     width: 100%;
     z-index: 5;
-    box-shadow: 0px 25px 30px 5px #142d4c;
+    -webkit-box-shadow: 0px 9px 13px -1px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 9px 13px -1px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 9px 13px -1px rgba(0, 0, 0, 0.33);
 }
 
 div#nav{
@@ -103,7 +109,13 @@ button.active {
 #Data th:hover{
     color: #142d4c;
     text-shadow: 0 0 10px #ececec;
-    cursor: pointer;
+}
+
+.chart {
+    display: none;
+    background-color: white;
+    padding: 25px;
+    margin: 10px;
 }
 
 footer{
@@ -113,16 +125,47 @@ footer{
 	background-color: #9fd3c7;
     text-align: right;
     color: #142d4c;
-    -webkit-box-shadow: 0px -6px 36px 0px rgba(0, 0, 0, 0.78);
-    -moz-box-shadow: 0px -6px 36px 0px rgba(0, 0, 0, 0.78);
-    box-shadow: 0px -6px 36px 0px rgba(0, 0, 0, 0.78);
+    -webkit-box-shadow: 0px -9px 13px -1px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px -9px 13px -1px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px -9px 13px -1px rgba(0, 0, 0, 0.33);
 }
 
 .tabcontent {
-    min-height: 100%;
     padding: 40px;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.author {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin: 25px;
+    -webkit-box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 13px -1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: 0.25s ease-in-out;
+    max-width: 350px;
+    min-width: 350px;
+}
+
+.author:hover {
+    scale: 1.015;
+}
+.author a {
+    background-color: #142d4c;
+    border-color: #142d4c;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.author a:hover {
+    background-color: #9fd3c7;
+    border-color: #9fd3c7;
+}
 #first_table {
     border-spacing: 8px;
     margin: 0 auto;
